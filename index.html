@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FPV Forecast</title>
+<meta name="description" content="Free weather forecast for FPV drone pilots: wind by altitude, gusts, rain, clouds, map.">
+<meta name="theme-color" content="#0E151E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="FPV Forecast">
+<script>
+  // На Android есть настоящее приложение (APK) — веб-версию там ставить не предлагаем.
+  // Без манифеста Chrome на Android не показывает «Установить приложение».
+  if (!/Android/i.test(navigator.userAgent)) {
+    var m = document.createElement('link'); m.rel = 'manifest'; m.href = 'manifest.webmanifest'; document.head.appendChild(m);
+  }
+</script>
+<link rel="apple-touch-icon" href="web/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="web/icons/favicon-32.png">
+<link rel="stylesheet" href="web/leaflet/leaflet.css">
+<link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+<div id="app"></div>
+<noscript>FPV Forecast needs JavaScript.</noscript>
+<script src="web/leaflet/leaflet.js"></script>
+<script src="web/i18n-en.js"></script>
+<script src="web/core.js"></script>
+<script src="web/app.js"></script>
+</body>
+</html>
